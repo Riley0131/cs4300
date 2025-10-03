@@ -1,0 +1,12 @@
+{% extends "bookings/base.html" %}
+{% block title %}Book: {{ movie.title }}{% endblock %}
+{% block content %}
+<h2>Book Seats – {{ movie.title }}</h2>
+<ul>
+  {% for s in seats %}
+    <li>{{ s.seat_number }} {% if s.is_booked %}(booked){% endif %}</li>
+  {% empty %}
+    <li>No seats yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
