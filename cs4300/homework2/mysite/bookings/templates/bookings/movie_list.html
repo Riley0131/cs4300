@@ -1,9 +1,0 @@
-{% extends "bookings/base.html" %}
-{% block content %}
-<h2>Movies</h2>
-<ul>
-  {% for m in movies %}
-    <li>{{ m.title }} · <a href="{% url 'book_seat' m.id %}">Book Now</a></li>
-  {% endfor %}
-</ul>
-{% endblock %}
